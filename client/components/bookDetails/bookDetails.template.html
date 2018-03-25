@@ -8,11 +8,21 @@
       <h5>Publisher: {{vm.book.publisher}}</h5>
       <h5>Description</h5>
       <p>{{vm.book.description}}</p>
+      <br>
+      <br>
+
+      <div ng-if="vm.book.buy_links.length">
+        <h4>Buy copies here!</h4>
+        <div class="buy-links-container">
+          <a
+            class="buy-link"
+            ng-repeat="buy_link in vm.book.buy_links"
+            ng-href="{{buy_link.url}}">{{buy_link.name}}
+          </a>
+        </div>
+      </div>
     </div>
 
-    <div ng-if="vm.book.buy_links.length">
-      <p ng-repead="buyLink in vm.book.buy_links">{{buyLink}}</p>
-    </div>
 
     <a ng-if="vm.book.book_review_link.length" href="{{vm.book.book_review_link}}"></a>
   </div>
