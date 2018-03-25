@@ -1,5 +1,5 @@
 <div class="side-component">
-  <h1>{{vm.selectedList.display_name}}</h1>
+  <h1 class="side-component-title">{{vm.selectedList.display_name}}</h1>
   <div class="book-entries-container">
     <book-entry-component
       ng-repeat="book in vm.selectedList.books track by $index"
