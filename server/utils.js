@@ -5,7 +5,7 @@
   Param {Object} res - an express resonse object
   Param {Object || Array} - The response data from some sort of call
 */
-function sendResponse(res, data) {
+let sendResponse = (res, data) => {
   res.send({
     data: data
   });
