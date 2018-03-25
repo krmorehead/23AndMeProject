@@ -9,8 +9,13 @@
 		vm.displayMessage = 'Hello World'
 
     function initialize() {
-      BestsellerService.getBestSellers();
+      BestsellerService.getBestSellers()
+        .then(function (bestSellerData) {
+          vm.bestSellerData = bestSellerData;
+        });
     }
+
+
     initialize();
 	}
 })()

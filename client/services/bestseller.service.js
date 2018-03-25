@@ -18,9 +18,11 @@
       return $http({
         method: 'GET',
         url: '/bestSellers',
-      }).then(function (data) {
-        console.log(data);
-      });
+      }).then(extractBestSellerData);
+    }
+
+    function extractBestSellerData(data) {
+      return JSON.parse(data.data.data);
     }
   }
 })();

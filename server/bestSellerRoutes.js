@@ -1,8 +1,11 @@
-var request = require('request');
+var request = require('request-promise-native');
+var utils = require('./utils');
+
+const BESTSELLER_URL = 'http://api.nytimes.com/svc/books/v3/lists/overview.json?callback=foobar&api-key=';
 
 module.exports = function(app){
   app.get('/bestSellers', getBestsellerList.bind(null, app));
-}
+};
 
 /**
   Description:
@@ -13,7 +16,6 @@ module.exports = function(app){
   Returns {array} Returns an array of bestSellers
 */
 function getBestsellerList(app, req, res) {
-  res.send({
-    message: 'success'
-  })
+  return request(BESTSELLER_URL + process.env.BESTSELLER_API_KEY)
+    .then(utils.sendResponse.bind(null, res));
 }
