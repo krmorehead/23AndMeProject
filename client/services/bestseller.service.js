@@ -5,9 +5,9 @@
     .module('23AndMeProject')
     .factory('BestsellerService', BestsellerService);
 
-  BestsellerService.$inject = [];
+  BestsellerService.$inject = ['$http'];
 
-  function BestsellerService() {
+  function BestsellerService($http) {
     var service = {
       getBestSellers: getBestSellers
     };
@@ -15,7 +15,12 @@
     return service;
 
     function getBestSellers() {
-      console.log('get the best sellers!!');
+      return $http({
+        method: 'GET',
+        url: '/bestSellers',
+      }).then(function (data) {
+        console.log(data);
+      });
     }
   }
 })();

@@ -16,6 +16,8 @@ app.use(cors());
 console.log(`${__dirname}/../client`)
 app.use(express.static(__dirname+"/../client"));
 
+require('./bestSellerRoutes')(app);
+
 console.log(`App listening on port ${PORT}`)
 app.listen(PORT)
 
