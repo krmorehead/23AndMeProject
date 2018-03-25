@@ -1,10 +1,9 @@
 <div class="side-component">
   <div class="side-component-header">
-    <h1 class="side-component-title">{{vm.selectedList.display_name}}</h1>
 
     <div class="side-component-select">
-      <label>Select A Genre</label>
-      <select ng-model="vm.selectedGenre" ng-change="vm.selectGenre()">
+      <h1 class="side-component-title">Select A Genre</h1>
+      <select class="select-dropdown" ng-model="vm.selectedGenre" ng-change="vm.selectGenre()">
         <option
         ng-repeat="genre in vm.genres track by genre.index"
         value="{{genre}}">{{genre.display_name}}</option>

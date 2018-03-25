@@ -18,14 +18,17 @@ body{
 }
 
 .side-component-title {
-  margin: 0 10px 0 10px;
   text-align: center;
 }
 
 .side-component-select {
-  margin-left: 20px;
   margin-bottom: 10px;
 }
+
+.select-dropdown {
+  margin-left: 3vw;
+}
+
 
 .book-entries-container {
   overflow: scroll;
