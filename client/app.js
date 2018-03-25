@@ -11,10 +11,14 @@
       BestsellerService.getBestSellers()
         .then(function (bestSellerData) {
           vm.bestSellerData = bestSellerData;
-          console.log(vm.bestSellerData);
+          selectList(0);
         });
     }
 
-    // initialize();
+    function selectList(index) {
+      vm.selectedList = vm.bestSellerData.lists[index];
+    }
+
+    initialize();
 	}
 })()

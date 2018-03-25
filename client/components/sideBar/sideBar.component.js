@@ -4,7 +4,9 @@
   var sideBarComponent = {
     templateUrl: 'components/sideBar/sideBar.template.html',
     controller: SideBarController,
-    bindings: {},
+    bindings: {
+      selectedList: '<'
+    },
     controllerAs: 'vm'
   };
 
@@ -16,9 +18,9 @@
 
   function SideBarController() {
     var vm = this;
-    vm.message = 'Hello World'
 
-    function initialize() {}
+    function initialize() {
+    }
 
     initialize();
   }

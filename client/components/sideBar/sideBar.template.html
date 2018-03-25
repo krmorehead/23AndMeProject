@@ -1,1 +1,9 @@
-<h1>{{vm.message}}</h1>
+<div class="side-component">
+  <h1>{{vm.selectedList.display_name}}</h1>
+  <div ng-repeat="book in vm.selectedList.books track by $index">
+    <h1>Hi</h1>
+    <book-entry-component
+      book="book">
+    </book-entry-component>
+  </div>
+</div>

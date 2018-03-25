@@ -1,3 +1,8 @@
-.message {
-  background-color: green;
+.side-component {
+  width: 300px;
+  border-right: 1px solid black;
+  height: 80vh;
+  background-color: blue;
+  padding-top: 10vh;
+  padding-bottom: 10vh;
 }
