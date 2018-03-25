@@ -3,6 +3,9 @@ var bodyParser = require('body-parser');
 var cors = require('cors');
 var session = require('express-session')
 var bodyParser = require('body-parser');
+
+require('dotenv').config()
+
 var PORT = process.env.PORT || 8001;
 
 var app = express();
