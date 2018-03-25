@@ -18,11 +18,5 @@
 
   function BookEntryController() {
     var vm = this;
-
-    function initialize() {
-      console.log(vm);
-    }
-
-    initialize();
   }
 })();

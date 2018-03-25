@@ -5,7 +5,9 @@
     templateUrl: 'components/sideBar/sideBar.template.html',
     controller: SideBarController,
     bindings: {
-      selectedList: '<'
+      selectedList: '<',
+      genres: '<',
+      selectList: '<'
     },
     controllerAs: 'vm'
   };
@@ -19,9 +21,13 @@
   function SideBarController() {
     var vm = this;
 
-    function initialize() {
+    vm.$onInit = function () {
+      vm.selectedGenre = JSON.stringify(vm.genres[0])
     }
 
-    initialize();
+    vm.selectGenre = function() {
+      var selectedGenre = JSON.parse(vm.selectedGenre);
+      vm.selectList(selectedGenre.index);
+    }
   }
 })();

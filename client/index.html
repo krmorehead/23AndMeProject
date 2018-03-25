@@ -1,7 +1,8 @@
 <html>
 <head>
 	<title></title>
-	<script src = "./bower_components/angular/angular.min.js"></script>
+  <script src = "./bower_components/angular/angular.min.js"></script>
+	<script src = "./bower_components/lodash/dist/lodash.min.js"></script>
   <link rel="stylesheet" type="text/css" href="styles/styles.css">
 
 </head>
@@ -20,7 +21,10 @@
 
     <!-- app -->
     <side-bar-component
-    selected-list="vm.selectedList">
+      ng-if="vm.loaded"
+      selected-list="vm.selectedList"
+      select-list="vm.selectList"
+      genres="vm.genres">
     </side-bar-component>
 	</div>
 </body>

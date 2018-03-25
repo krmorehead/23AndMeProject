@@ -1,5 +1,15 @@
 <div class="side-component">
   <h1 class="side-component-title">{{vm.selectedList.display_name}}</h1>
+
+  <div class="side-component-select">
+    <label>Select A Genre</label>
+    <select ng-model="vm.selectedGenre" ng-change="vm.selectGenre()">
+      <option
+      ng-repeat="genre in vm.genres track by genre.index"
+      value="{{genre}}">{{genre.display_name}}</option>
+    </select>
+  </div>
+
   <div class="book-entries-container">
     <book-entry-component
       ng-repeat="book in vm.selectedList.books track by $index"
