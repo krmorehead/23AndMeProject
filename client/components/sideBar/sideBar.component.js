@@ -7,7 +7,8 @@
     bindings: {
       selectedList: '<',
       genres: '<',
-      selectList: '<'
+      selectList: '<',
+      selectBook: '<'
     },
     controllerAs: 'vm'
   };

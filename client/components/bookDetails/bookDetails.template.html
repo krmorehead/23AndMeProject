@@ -1,3 +1,19 @@
 <div class="book-details-container">
-  <h1> THIS IS A BOOK </h1>
+  <h1 ng-if="!vm.book"> Select A BOOK </h1>
+  <div ng-if="vm.book" class="book-container">
+    <img class="book-detail-image" src="{{vm.book.book_image}}">
+    <div class="book-textual-details">
+      <h3>{{vm.book.title}}</h3>
+      <h4>Author: {{vm.book.author || vm.book.contributor}}</h4>
+      <h5>Publisher: {{vm.book.publisher}}</h5>
+      <h5>Description</h5>
+      <p>{{vm.book.description}}</p>
+    </div>
+
+    <div ng-if="vm.book.buy_links.length">
+      <p ng-repead="buyLink in vm.book.buy_links">{{buyLink}}</p>
+    </div>
+
+    <a ng-if="vm.book.book_review_link.length" href="{{vm.book.book_review_link}}"></a>
+  </div>
 </div>

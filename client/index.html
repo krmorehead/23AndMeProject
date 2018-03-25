@@ -30,10 +30,13 @@
       ng-if="vm.loaded"
       selected-list="vm.selectedList"
       select-list="vm.selectList"
+      select-book="vm.selectBook"
       genres="vm.genres">
     </side-bar-component>
 
-    <book-details-component ng-if="vm.loaded">
+    <book-details-component
+      ng-if="vm.loaded"
+      book="vm.selectedBook">
     </book-details-component>
 
 	</div>

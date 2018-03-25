@@ -7,6 +7,7 @@
 	function BestSellerController ($scope, BestsellerService) {
 		var vm = this;
     vm.selectList = selectList;
+    vm.selectBook = selectBook;
 
     function initialize() {
       vm.loaded = false;
@@ -30,6 +31,11 @@
 
     function selectList(index) {
       vm.selectedList = vm.bestSellerData.lists[index];
+    }
+
+    function selectBook(bookIndex) {
+      vm.bookIndex = bookIndex;
+      vm.selectedBook = vm.selectedList.books[bookIndex]
     }
 
     initialize();
