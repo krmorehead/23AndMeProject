@@ -17,6 +17,10 @@ app.use(express.static(__dirname+"/../client"));
 
 require('./bestSellerRoutes')(app);
 
+app.get('/', function (req, res) {
+    res.send('Hello Digital Ocean!')
+});
+
 console.log(`App listening on port ${PORT}`);
 app.listen(PORT);
 
