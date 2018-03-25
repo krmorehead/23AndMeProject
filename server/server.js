@@ -18,6 +18,6 @@ app.use(express.static(__dirname+"/../client"));
 require('./bestSellerRoutes')(app);
 
 console.log(`App listening on port ${PORT}`);
-app.listen(PORT);
+app.listen(PORT, process.env.HOST || 'localhost');
 
 module.exports = app;
