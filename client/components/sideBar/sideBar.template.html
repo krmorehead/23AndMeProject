@@ -1,0 +1,21 @@
+<div class="side-component">
+  <div class="side-component-header">
+
+    <div class="side-component-select">
+      <h1 class="side-component-title">Select A Genre</h1>
+      <select class="select-dropdown" ng-model="vm.selectedGenre" ng-change="vm.selectGenre()">
+        <option
+        ng-repeat="genre in vm.genres track by genre.index"
+        value="{{genre}}">{{genre.display_name}}</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="book-entries-container">
+    <book-entry-component
+      ng-repeat="book in vm.selectedList.books track by $index"
+      ng-click="vm.selectBook($index)"
+      book="book">
+    </book-entry-component>
+  </div>
+</div>

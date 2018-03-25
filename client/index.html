@@ -1,17 +1,44 @@
 <html>
 <head>
 	<title></title>
-	<script src = "./bower_components/angular/angular.min.js"></script>
+  <script src = "./bower_components/angular/angular.min.js"></script>
+	<script src = "./bower_components/lodash/dist/lodash.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="styles/styles.css">
+  <link rel="stylesheet" type="text/css" href="styles/loader.css">
+
 </head>
-<body ng-app = "23AndMeProject">
+<body ng-app="23AndMeProject">
 	<div ng-controller = "BestSellerController as vm">
-		<h1 ng-cloak>{{vm.displayMessage}}</h1>
 
 		<!-- app scripts -->
     <script src = "./app.js"></script>
 
     <!-- Services -->
 		<script src = "./services/bestseller.service.js"></script>
+
+    <!-- Components -->
+    <script src = "./components/sideBar/sideBar.component.js"></script>
+    <script src = "./components/bookEntry/bookEntry.component.js"></script>
+    <script src = "./components/bookDetails/bookDetails.component.js"></script>
+
+    <!-- app -->
+    <div class="loader-wrapper" ng-if="!vm.loaded">
+      <div class="loader"></div>
+    </div>
+
+    <side-bar-component
+      ng-if="vm.loaded"
+      selected-list="vm.selectedList"
+      select-list="vm.selectList"
+      select-book="vm.selectBook"
+      genres="vm.genres">
+    </side-bar-component>
+
+    <book-details-component
+      ng-if="vm.loaded"
+      book="vm.selectedBook">
+    </book-details-component>
+
 	</div>
 </body>
 </html>

@@ -1,19 +1,23 @@
-var express = require('express');
-var bodyParser = require('body-parser');
-var cors = require('cors');
-var session = require('express-session')
-var bodyParser = require('body-parser');
-var PORT = process.env.PORT || 8001;
+let express = require('express');
+let cors = require('cors');
+let session = require('express-session');
+let bodyParser = require('body-parser');
 
-var app = express();
+require('dotenv').config();
+
+let PORT = process.env.PORT || 8001;
+
+let app = express();
 app.use(bodyParser.json());
 
 app.use(cors());
 
-console.log(`${__dirname}/../client`)
+console.log(`${__dirname}/../client`);
 app.use(express.static(__dirname+"/../client"));
 
-console.log(`App listening on port ${PORT}`)
-app.listen(PORT)
+require('./bestSellerRoutes')(app);
+
+console.log(`App listening on port ${PORT}`);
+app.listen(PORT);
 
 module.exports = app;

@@ -1,0 +1,36 @@
+<div class="book-details-container">
+  <div ng-if="vm.book" class="book-container">
+    <img class="book-detail-image" src="{{vm.book.book_image}}">
+    <div class="book-textual-details">
+      <h3>{{vm.book.title}}</h3>
+      <h4>Author: {{vm.book.author || vm.book.contributor}}</h4>
+      <h5>Publisher: {{vm.book.publisher}}</h5>
+      <h5>Rank: {{vm.book.rank}}</h5>
+      <h5>Description</h5>
+      <p>{{vm.book.description}}</p>
+      <br>
+      <br>
+
+      <div ng-if="vm.book.buy_links.length">
+        <h4>Buy copies here!</h4>
+        <div class="buy-links-container">
+          <a
+            class="buy-link"
+            ng-repeat="buy_link in vm.book.buy_links"
+            ng-href="{{buy_link.url}}">{{buy_link.name}}
+          </a>
+        </div>
+      </div>
+
+      <!-- additional details -->
+      <div>
+        <h4 ng-if="vm.book.rank_last_week">Rank Last Week: {{vm.book.rank_last_week}}</h4>
+        <h4 ng-if="vm.book.weeks_on_list">Weeks On List: {{vm.book.weeks_on_list}}</h4>
+        <h4 ng-if="vm.book.price">Price: ${{vm.book.weeks_on_list}}</h4>
+      </div>
+    </div>
+
+
+    <a ng-if="vm.book.book_review_link.length" href="{{vm.book.book_review_link}}"></a>
+  </div>
+</div>
