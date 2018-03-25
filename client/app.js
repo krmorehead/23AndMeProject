@@ -6,7 +6,6 @@
 
 	function BestSellerController ($scope, BestsellerService) {
 		var vm = this
-		vm.displayMessage = 'Hello World'
 
     function initialize() {
       BestsellerService.getBestSellers()
@@ -14,7 +13,6 @@
           vm.bestSellerData = bestSellerData;
         });
     }
-
 
     initialize();
 	}
