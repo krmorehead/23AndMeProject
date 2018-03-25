@@ -31,6 +31,7 @@
 
     function selectList(index) {
       vm.selectedList = vm.bestSellerData.lists[index];
+      vm.selectBook(0)
     }
 
     function selectBook(bookIndex) {

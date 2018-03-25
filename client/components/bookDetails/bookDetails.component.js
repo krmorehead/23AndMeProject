@@ -18,6 +18,5 @@
 
   function BookDetailsController() {
     var vm = this;
-    debugger
   }
 })();

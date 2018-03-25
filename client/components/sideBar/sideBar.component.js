@@ -24,6 +24,7 @@
 
     vm.$onInit = function () {
       vm.selectedGenre = JSON.stringify(vm.genres[0])
+      vm.selectBook(0);
     }
 
     vm.selectGenre = function() {
