@@ -29,7 +29,6 @@
     }
 
     function selectList(index) {
-      debugger;
       vm.selectedList = vm.bestSellerData.lists[index];
     }
 
