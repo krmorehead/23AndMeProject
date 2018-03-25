@@ -11,6 +11,15 @@ let sendResponse = (res, data) => {
   });
 }
 
+let handleError = (res, err) => {
+  res.statusCode = err.statusCode;
+  res.statusMessage =  err.message;
+  res.send({
+    data: err
+  })
+}
+
 module.exports = {
-  sendResponse: sendResponse
+  sendResponse: sendResponse,
+  handleError: handleError
 };

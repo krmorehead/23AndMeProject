@@ -24,7 +24,9 @@
       return $http({
         method: 'GET',
         url: '/bestSellers',
-      }).then(extractBestSellerData);
+      })
+      .then(extractBestSellerData)
+      .catch(console.error);
     }
 
     /**
@@ -36,7 +38,7 @@
       Returns {Object} The best seller data parsed and extracted
     */
     function extractBestSellerData(data) {
-      return JSON.parse(data.data.data);
+      return JSON.parse(data.data.data).results;
     }
   }
 })();
