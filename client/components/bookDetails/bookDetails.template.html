@@ -6,6 +6,7 @@
       <h3>{{vm.book.title}}</h3>
       <h4>Author: {{vm.book.author || vm.book.contributor}}</h4>
       <h5>Publisher: {{vm.book.publisher}}</h5>
+      <h5>Rank: {{vm.book.rank}}</h5>
       <h5>Description</h5>
       <p>{{vm.book.description}}</p>
       <br>
@@ -20,6 +21,13 @@
             ng-href="{{buy_link.url}}">{{buy_link.name}}
           </a>
         </div>
+      </div>
+
+      <!-- additional details -->
+      <div>
+        <h4 ng-if="vm.book.rank_last_week">Rank Last Week: {{vm.book.rank_last_week}}</h4>
+        <h4 ng-if="vm.book.weeks_on_list">Weeks On List: {{vm.book.weeks_on_list}}</h4>
+        <h4 ng-if="vm.book.price">Price: ${{vm.book.weeks_on_list}}</h4>
       </div>
     </div>
 
