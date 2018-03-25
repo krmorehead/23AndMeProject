@@ -1,22 +1,16 @@
 (function(){
-	angular.module('blankApp',[])
-	.controller('helloWorldController', helloWorldController) 
+	angular.module('23AndMeProject',[])
+	.controller('BestSellerController', BestSellerController) 
 
-	function helloWorldController ($scope) {
+  BestSellerController.$inject = ['$scope', 'BestsellerService'];
+
+	function BestSellerController ($scope, BestsellerService) {
 		var vm = this
 		vm.displayMessage = 'Hello World'
-    vm.messages = [];
-    vm.runFunction = runFunction;
-    vm.saveMessage = saveMessage;
 
-
-    function runFunction() {
-      console.log('hi')
+    function initialize() {
+      BestsellerService.getBestSellers();
     }
-
-    function saveMessage() {
-      vm.messages.unshift(vm.message);
-      vm.message = '';
-    }
+    initialize();
 	}
 })()
