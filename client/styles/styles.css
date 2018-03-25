@@ -6,3 +6,21 @@
   padding-top: 10vh;
   padding-bottom: 10vh;
 }
+
+.book-entries-container {
+  overflow: scroll;
+  height: 70vh;
+}
+
+.book-entry-thumbnail {
+  width: 60px;
+  height: 80px;
+}
+
+.book-entry {
+  margin: auto;
+  width: 280px;
+  padding-left: 10px;
+  padding-right: 10px;
+  height: 120px;
+}
