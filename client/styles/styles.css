@@ -69,6 +69,7 @@ body{
 .book-details-container {
   overflow: scroll;
   margin: 5px 5px 5px 305px;
+  align-items: center;
   display: flex;
   flex-direction: row;
   background-color: rgba(200, 200, 200, .8);
@@ -80,6 +81,7 @@ body{
 
 .book-container {
   display: flex;
+  margin-left: 10px;
 }
 
 .book-textual-details {
