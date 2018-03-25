@@ -68,3 +68,10 @@ body{
   background-color: blue;
   height: 100vh;
 }
+
+.loader-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}

@@ -4,6 +4,7 @@
   <script src = "./bower_components/angular/angular.min.js"></script>
 	<script src = "./bower_components/lodash/dist/lodash.min.js"></script>
   <link rel="stylesheet" type="text/css" href="styles/styles.css">
+  <link rel="stylesheet" type="text/css" href="styles/loader.css">
 
 </head>
 <body ng-app="23AndMeProject">
@@ -21,6 +22,10 @@
     <script src = "./components/bookDetails/bookDetails.component.js"></script>
 
     <!-- app -->
+    <div class="loader-wrapper" ng-if="!vm.loaded">
+      <div class="loader"></div>
+    </div>
+
     <side-bar-component
       ng-if="vm.loaded"
       selected-list="vm.selectedList"
