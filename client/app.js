@@ -1,6 +1,6 @@
 (function(){
 	angular.module('23AndMeProject',[])
-	.controller('BestSellerController', BestSellerController) 
+	 .controller('BestSellerController', BestSellerController) 
 
   BestSellerController.$inject = ['$scope', 'BestsellerService'];
 
@@ -11,9 +11,10 @@
       BestsellerService.getBestSellers()
         .then(function (bestSellerData) {
           vm.bestSellerData = bestSellerData;
+          console.log(vm.bestSellerData);
         });
     }
 
-    initialize();
+    // initialize();
 	}
 })()
