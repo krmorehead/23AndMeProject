@@ -11,6 +11,13 @@ let sendResponse = (res, data) => {
   });
 }
 
+/**
+  Description:
+    Sends a standard error from a request
+
+  Param {Object} res - an express resonse object
+  Param {Object} - An error object to be used for information to pass along.
+*/
 let handleError = (res, err) => {
   res.statusCode = err.statusCode;
   res.statusMessage =  err.message;
