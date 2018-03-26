@@ -16,7 +16,6 @@ module.exports = function(app){
   Returns {array} Returns an array of bestSellers
 */
 let getBestsellerList = (app, req, res) => {
-  console.log('ping');
   return request(BESTSELLER_URL + process.env.BESTSELLER_API_KEY)
     .then(utils.sendResponse.bind(null, res))
     .catch(utils.handleError.bind(null, res));
