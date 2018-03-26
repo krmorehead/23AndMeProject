@@ -59,7 +59,12 @@ body{
 }
 
 .book-entry-details {
+  padding-right: 15px;
   display: inline-block;
+}
+
+.book {
+  width: 90%;
 }
 
 .book-entry-details > * {
