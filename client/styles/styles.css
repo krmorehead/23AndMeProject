@@ -26,10 +26,6 @@ body{
   margin: 0 0 0 0;
 }
 
-.side-component-select {
-  /*margin-bottom: 1vh;*/
-}
-
 .select-dropdown {
   background-color: white;
 }
@@ -86,15 +82,13 @@ body{
 
 .book-container {
   display: flex;
+  align-items: center;
   margin-left: 10px;
-}
-
-.book-textual-details {
 }
 
 .book-detail-image {
   min-width: 300px;
-  max-height: 500px;
+  max-height: 98vh;
   margin: 5px 5px 5px 5px;
 }
 
