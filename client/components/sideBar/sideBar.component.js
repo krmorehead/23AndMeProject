@@ -27,6 +27,10 @@
       vm.selectBook(0);
     }
 
+    /**
+      Description;
+        Triggers the selectList function based on the currently selected genre from the dropdown menu
+    */
     vm.selectGenre = function() {
       var selectedGenre = JSON.parse(vm.selectedGenre);
       vm.selectList(selectedGenre.index);

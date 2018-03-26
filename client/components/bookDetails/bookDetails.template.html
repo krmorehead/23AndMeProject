@@ -7,8 +7,7 @@
       <h5>Publisher: {{vm.book.publisher}}</h5>
       <h5>Rank: {{vm.book.rank}}</h5>
       <h5>Description</h5>
-      <p>{{vm.book.description}}</p>
-      <br>
+      <p>{{vm.book.description || "No Description Provided"}}</p>
       <br>
 
       <div ng-if="vm.book.buy_links.length">

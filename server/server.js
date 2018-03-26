@@ -5,7 +5,7 @@ let bodyParser = require('body-parser');
 
 require('dotenv').config();
 
-let PORT = process.env.PORT || 8001;
+let PORT = process.env.PORT || 3000;
 
 let app = express();
 app.use(bodyParser.json());
